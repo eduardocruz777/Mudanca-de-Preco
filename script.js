@@ -6,13 +6,13 @@ function verificar() {
     let dif2 = (pan - pat)
     let por2 = (dif2 / pat) * 100
     res.innerHTML = '<h2><p>Analisando os valores informados:</p></h2>'
-    if (pan < pat) {
+    if ((pan < pat) && (pan > 0) && (pat > 0)) {
         res.innerHTML += `<p>O produto custava ${pan.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} e agora custa ${pat.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.</p>`
         res.innerHTML += '<p>Hoje o produto está mais caro.</p>'
         res.innerHTML += `<p>O preço subiu ${dif1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} em relação ao preço anterior.</p>`
         res.innerHTML += `<p>Uma variação de ${por1.toLocaleString('pt-br', {maximumFractionDigits: 2})}% para cima.</p>`
 
-    } else if (pan > pat) {
+    } else if ((pan > pat) && (pan > 0) && (pat > 0)) {
         res.innerHTML += `<p>O produto custava ${pan.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} e agora custa ${pat.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</p>`
         res.innerHTML += '<p>Hoje o produto está mais barato.</p>'
         res.innerHTML += `<p>O preço caiu ${dif2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} em relação ao preço anterior.</p>`
