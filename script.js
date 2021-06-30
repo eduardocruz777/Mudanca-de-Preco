@@ -18,7 +18,7 @@ function verificar() {
         res.innerHTML += `<p>O preço caiu ${dif2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} em relação ao preço anterior.</p>`
         res.innerHTML += `<p>Uma variação de ${por2.toLocaleString('pt-br',{maximumFractionDigits: 2})}% para baixo.</p>`
     } else {
-        window.alert('Não houve alteração! Por favor digite um valor válido')
+        window.alert('Não houve alteração! Por favor digite um valor válido.')
         res.innerHTML = '<p>Clique no botão acima para analisar a mudança de preço</p>'
     }
 }
